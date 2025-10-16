@@ -9,6 +9,8 @@ Este é um boilerplate com um setup inicial e as principais dependências para p
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178C6?logo=typescript)
 ![Vite](https://img.shields.io/badge/Vite-7.1.7-646CFF?logo=vite)
 ![Styled Components](https://img.shields.io/badge/styled--components-6.1.19-DB7093?logo=styled-components)
+![Vitest](https://img.shields.io/badge/Vitest-3.2.4-6E9F18?logo=vitest)
+![React Testing Library](https://img.shields.io/badge/RTL-16.3.0-E33332?logo=testing-library)
 ![ESLint](https://img.shields.io/badge/ESLint-9.37.0-4B32C3?logo=eslint)
 ![Prettier](https://img.shields.io/badge/Prettier-3.6.2-F7B93E?logo=prettier)
 ![Husky](https://img.shields.io/badge/Husky-8.0.0-000000?logo=github)
@@ -37,15 +39,18 @@ Este é um boilerplate com um setup inicial e as principais dependências para p
 
 ## Scripts disponíveis
 
-| Comando            | Descrição                                                   |
-| ------------------ | ----------------------------------------------------------- |
-| `npm run dev`      | Inicia o servidor de desenvolvimento Vite                   |
-| `npm run build`    | Compila TypeScript e gera build para produção               |
-| `npm run start`    | Roda preview da build gerada                                |
-| `npm run lint`     | Executa ESLint para analisar o código                       |
-| `npm run lint:fix` | Corrige automaticamente problemas identificados pelo ESLint |
-| `npm run format`   | Formata arquivos com Prettier                               |
-| `npm run prepare`  | Instala hooks do Husky                                      |
+| Comando              | Descrição                                                   |
+| -------------------- | ----------------------------------------------------------- |
+| `npm run dev`        | Inicia o servidor de desenvolvimento Vite                   |
+| `npm run build`      | Compila TypeScript e gera build para produção               |
+| `npm run start`      | Roda preview da build gerada                                |
+| `npm run lint`       | Executa ESLint para analisar o código                       |
+| `npm run lint:fix`   | Corrige automaticamente problemas identificados pelo ESLint |
+| `npm run format`     | Formata arquivos com Prettier                               |
+| `npm run prepare`    | Instala hooks do Husky                                      |
+| `npm run test`       | Executa todos os testes com Vitest                          |
+| `npm run test:watch` | Executa os testes em modo observador (watch)                |
+| `npm run coverage`   | Gera relatório de cobertura de testes                       |
 
 ## Lint e Formatação
 
@@ -53,6 +58,25 @@ Este é um boilerplate com um setup inicial e as principais dependências para p
 - Use `npm run lint` para verificar erros manualmente.
 - Use `npm run lint:fix` para corrigir erros automaticamente.
 - Utilize `npm run format` para aplicar a formatação Prettier em todos os arquivos suportados.
+
+## Testes Automatizados
+
+Este projeto utiliza:
+
+- ✅ **[Vitest](https://vitest.dev/)** como test runner ultrarrápido.
+- 🧪 **[React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)** para testes de componentes React focados na experiência do usuário.
+
+### Estrutura recomendada para testes
+
+- Criar arquivos `*.test.ts` ou `*.test.tsx` na mesma pasta do componente.
+
+### Executar os testes
+
+```bash
+npm run test
+npm run test:watch
+npm run coverage
+```
 
 ## Utilização
 
